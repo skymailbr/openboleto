@@ -1474,13 +1474,18 @@ abstract class BoletoAbstract
      * Retorna o número de dias de 07/10/1997 até a data de vencimento do boleto
      * Ou 0000 caso não tenha data de vencimento (contra-apresentação)
      *
+     * @see https://download.itau.com.br/bankline/layout_cobranca_400bytes_cnab_itau.pdf Anexo 6
      * @return string
      */
     protected function getFatorVencimento()
     {
         if (!$this->getContraApresentacao()) {
             $date = new DateTime('1997-10-07');
-            return $date->diff($this->getDataVencimento())->days;
+            $days = $date->diff($this->getDataVencimento())->days;
+            if ($days > 9999) {
+                $days -= 9000;
+            }
+            return $days;
         } else {
             return '0000';
         }
