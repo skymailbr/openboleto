@@ -1,9 +1,9 @@
 {
-    "name": "openboleto/openboleto",
+    "name": "skymailbr/openboleto",
     "type": "library",
     "description": "Biblioteca para geração de boletos bancários.",
     "keywords": ["boleto", "boleto bancario"],
-    "homepage": "http://github.com/openboleto/openboleto",
+    "homepage": "http://github.com/skymailbr/openboleto",
     "license": "MIT",
     "authors": [
         {
@@ -14,10 +14,14 @@
             "name": "Daniel Garajau",
             "email": "daniel@garajau.com.br"
         },
-        {
-            "name": "Rogerio Muniz",
-            "email": "rogerio@quilhasoft.com.br"
-        }
+      {
+        "name": "Rogerio Muniz",
+        "email": "rogerio@quilhasoft.com.br"
+      },
+      {
+        "name": "Lucas Marin",
+        "email": "lucasmarin@gmail.com"
+      }
     ],
     "require": {
         "php": ">=5.6"
